@@ -54,4 +54,8 @@ This project is **open-source** and available under the [MIT License](LICENSE).
 
 ---
 
+## Deployed Link
+- https://prettyxpensetracker.netlify.app/
+---
+
 Made with ❤️ by [Akshaya Keerthi](https://github.com/ak)
