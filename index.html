@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Planner</title>
+    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Planner</h1>
+
+        <h2>Manage Month</h2>
+        <select id="monthSelector">
+            <option value="">-- Select Month --</option>
+        </select>
+        <button id="newMonth" class="full-width">Start New Month</button>
+
+        <div id="setupSection">
+            <h2>Set Monthly Budget</h2>
+            <input type="number" id="totalBudget" placeholder=" Please enter the total budget">
+            <textarea id="categories" placeholder="Enter categories and their percentages (e.g., Travel:40\nFood:30\nStationery:30)"></textarea>
+            <button id="setBudget" class="full-width">Set Budget</button>
+        </div>
+
+        <div id="plannerSection" style="display:none;">
+            <h2>Allocated Budget per Category</h2>
+            <ul id="allocatedList"></ul>
+
+            <h2>Add Expense</h2>
+            <input type="date" id="expenseDate">
+            <input type="text" id="expenseDesc" placeholder="Expense Description">
+            <input type="number" id="expenseAmount" placeholder="Amount">
+            <select id="expenseCategory"></select>
+            <button id="addExpense" class="full-width">Add Expense</button>
+
+            <h2>Expenses History</h2>
+            <select id="expenseDateFilter">
+                <option value="all">Show All Dates</option>
+            </select>
+            <div id="expenseSummary"></div>
+            <ul id="expenseList"></ul>
+
+            <h2>Summary Report</h2>
+            <select id="summaryDateFilter">
+                <option value="all">Show All Dates</option>
+            </select>
+            <button id="viewSummary" class="small-button">View Summary</button>
+
+            <div id="summaryReport" style="display:none;">
+                <div id="summaryTotal"></div>
+                <ul id="summaryList"></ul>
+                <button id="downloadCSV" class="small-button">Download CSV</button>
+            </div>
+
+            <h2>Yearly Summary</h2>
+            <button id="viewYearlySummary" class="small-button">View Yearly Summary</button>
+            <div id="yearlySummaryReport" style="display:none;">
+                <div id="yearlyTotalSpent"></div>
+                <ul id="yearlyCategoryBreakdown"></ul>
+            </div>
+
+            <h2>Danger Zone</h2>
+            <button id="clearAllData" class="small-button">Clear All Data</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
